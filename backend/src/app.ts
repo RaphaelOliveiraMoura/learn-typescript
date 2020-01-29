@@ -8,9 +8,11 @@ class App {
 
   constructor() {
     this.server = express();
+
+    this.middlewares();
   }
 
-  routes() {
+  private middlewares() {
     this.server.use(cors());
     this.server.use(routes);
   }
